@@ -1,0 +1,71 @@
+
+globalThis
+
+Promise.allSettled([p1,p2,p3])
+//Nullish coalising problem
+
+let x = {
+profile{
+name = "john",
+age : 21,
+}}
+console.log(x.profile.name)
+//john
+
+let x = {
+profile{
+age : 21,
+}}
+console.log(x.profile.name || "john")
+//john
+
+let x = {
+profile{
+name : ''
+age : 21,
+}}
+console.log(x.profile.name || "john")
+//john
+
+
+let x = {
+profile{
+age : 0,
+}}
+console.log(x.profile.age || 21)
+//21
+
+
+----------
+
+
+let x = {
+profile{
+age : 0,
+}}
+console.log(x.profile.age ?? 21)
+//0
+
+if (undefined or null) ?? then this is executed
+
+
+let x = {
+profile{
+age : 0,
+}}
+console.log(x && x.profile && x.profile.age)
+console.log(x?.profile?.age)
+//0
+
+let x = {
+}
+console.log(x && x.profile && x.profile.age)
+console.log(x?.profile?.age)
+//undefined
+
+bigInt
+syntax
+const bigOne = 1n;
+
+'n' means bigInt
+
